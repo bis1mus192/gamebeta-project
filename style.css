@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f4f7fc;
+    color: #1e2a3a;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background: #060C2F;
+    padding: 0.8rem 4%;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.logo-img {
+    font-size: 2.4rem;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #FFD166, #FF6B6B);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.cart-icon {
+    position: relative;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background: #FF6B6B;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.search-input {
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    border: none;
+    width: 200px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.hero {
+    background: linear-gradient(rgba(6,12,47,0.8), rgba(6,12,47,0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&auto=format');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.filters-panel {
+    background: white;
+    border-radius: 28px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-btn, .sort-btn {
+    background: #eef2ff;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.filter-btn.active, .sort-btn.active {
+    background: #060C2F;
+    color: white;
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.8rem;
+}
+
+.game-card {
+    background: white;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+}
+
+.game-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.game-card .genre {
+    display: inline-block;
+    background: #FFD166;
+    padding: 0.2rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    margin: 0.5rem 1rem;
+}
+
+.game-card h3 {
+    margin: 0.5rem 1rem;
+}
+
+.game-card .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 1rem;
+    color: #060C2F;
+}
+
+.game-card button {
+    width: calc(100% - 2rem);
+    margin: 0 1rem 1rem;
+    padding: 0.6rem;
+    background: #060C2F;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.game-card button:hover {
+    background: #FF6B6B;
+}
+
+footer {
+    background: #060C2F;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+    .filters-panel {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    nav ul {
+        gap: 1rem;
+    }
+}

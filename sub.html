@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление подписки</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-bin.css">
+</head>
+<body>
+    <header>
+        <div class="logo" id="logoHome">
+            <span class="logo-img">🎮</span>
+            <span class="logo-text">GameBeta</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Игры</a></li>
+                <li><a href="actions.html">Акции</a></li>
+                <li><a href="mysub.html">Мои подписки</a></li>
+                <li><a href="sub.html" class="cart-icon">🛒<span id="cartCount" class="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="booking-main">
+        <h1>Оформление бета-подписки</h1>
+        <div class="booking-container">
+            <div class="cart-section">
+                <h2>Ваша корзина</h2>
+                <div id="cartItemsList"></div>
+                <div class="cart-total" id="cartTotalSum">Итого: 0 ₽</div>
+            </div>
+            <div class="form-section">
+                <h2>Контактные данные</h2>
+                <form id="orderForm">
+                    <label>Email для получения ключей *</label>
+                    <input type="email" id="email" required>
+                    <label>Промокод (если есть)</label>
+                    <input type="text" id="promo">
+                    <div class="error-message" id="formError"></div>
+                    <button type="submit" id="submitOrder">✅ Подтвердить заказ</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>© 2026 GameBeta — ключи придут на почту</footer>
+
+    <script src="game-data.js"></script>
+    <script src="bin-class.js"></script>
+    <script src="bin-logic.js"></script>
+</body>
+</html>

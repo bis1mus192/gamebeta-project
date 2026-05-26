@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameBeta – каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo" id="logoHome">
+            <span class="logo-img">🎮</span>
+            <span class="logo-text">GameBeta</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Игры</a></li>
+                <li><a href="actions.html">Акции</a></li>
+                <li><a href="sub.html">Мои подписки</a></li>
+                <li><input type="text" id="searchInput" class="search-input" placeholder="Поиск..."></li>
+                <li><a href="sub.html" class="cart-icon">🛒<span id="cartCount" class="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>🔥 Бета-тестирование игр<br>Доступ к новинкам первыми!</h1>
+    </section>
+
+    <main class="container">
+        <div class="filters-panel">
+            <div class="filter-group">
+                <button class="filter-btn active" data-genre="all">Все жанры</button>
+                <button class="filter-btn" data-genre="RPG">RPG</button>
+                <button class="filter-btn" data-genre="Экшен">Экшен</button>
+                <button class="filter-btn" data-genre="Симулятор">Симулятор</button>
+                <button class="filter-btn" data-genre="MMORPG">MMORPG</button>
+            </div>
+            <div class="filter-group">
+                <span>Сортировка:</span>
+                <button class="sort-btn" data-sort="name">По названию</button>
+                <button class="sort-btn active" data-sort="price">По цене (возр.)</button>
+                <button class="sort-btn" data-sort="price-desc">По цене (убыв.)</button>
+            </div>
+        </div>
+        <div id="catalogContainer" class="catalog"></div>
+    </main>
+
+    <footer>
+        <p>© 2026 GameBeta  — данные сохраняются в вашем браузере</p>
+    </footer>
+
+    <script src="game-data.js"></script>
+    <script src="bin-class.js"></script>
+    <script src="lib-class.js"></script>
+    <script src="init-main.js"></script>
+</body>
+</html>

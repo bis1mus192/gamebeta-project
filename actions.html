@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акции</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><span class="logo-img">🎮</span><span class="logo-text">GameBeta</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Игры</a></li>
+                <li><a href="actions.html">Акции</a></li>
+                <li><a href="mysub.html">Мои подписки</a></li>
+                <li><a href="sub.html" class="cart-icon">🛒<span id="cartCount" class="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>🔥 Акции и бонусы</h1>
+        <div class="promo-list">
+            <div class="promo-card">
+                <h3>Скидка 10% на 2+ игры</h3>
+                <p>При добавлении двух и более бета-доступов – автоматическая скидка.</p>
+            </div>
+            <div class="promo-card">
+                <h3>Приведи друга</h3>
+                <p>После первой покупки друга вы оба получите бесплатный скин.</p>
+            </div>
+            <div class="promo-card">
+                <h3>Пробный ключ за отзыв</h3>
+                <p>Оставьте отзыв – участвуйте в розыгрыше дополнительного ключа.</p>
+            </div>
+        </div>
+    </main>
+    <footer>© 2026 GameBeta</footer>
+    <script src="bin-class.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = new Cart();
+            document.getElementById('cartCount').innerText = cart.getTotalCount();
+        });
+    </script>
+</body>
+</html>
